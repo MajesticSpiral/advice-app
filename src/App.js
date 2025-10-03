@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css"; // Import your CSS
 
 export default function App() {
   const [advice, setAdvice] = useState("");
@@ -9,7 +10,6 @@ export default function App() {
     const data = await res.json();
     setAdvice(data.slip.advice);
     setCount((c) => c + 1);
-    console.log(data.slip.advice);
   }
 
   useEffect(() => {
@@ -17,18 +17,30 @@ export default function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Hello World</h1>
-      <button onClick={getAdvice}>Get Advice</button>
-      {advice && <p>{advice}</p>}
-      <Message count={count} />
+    <div className="App">
+      <header className="App-header">
+        {/* Spinning caregiving image instead of logo */}
+        <img src="/images/caregiving.jpg" className="App-logo" alt="Caregiving" />
+
+        <h1 className="App-title">Friendly Advice Hub</h1>
+
+        {/* Card for advice and button */}
+        <div className="App-card">
+          <p className="App-advice">{advice}</p>
+          <button className="App-button" onClick={getAdvice}>
+            Get New Advice
+          </button>
+        </div>
+
+        <Message count={count} />
+      </header>
     </div>
   );
 }
 
 function Message({ count }) {
   return (
-    <p>
+    <p className="App-advice">
       You have read <strong>{count}</strong> pieces of advice
     </p>
   );
