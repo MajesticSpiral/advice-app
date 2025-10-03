@@ -1,32 +1,35 @@
+/* General App styling */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+  color: #333;
+  padding: 2rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo styling */
+.App-logo {
+  height: 150px; /* adjust size as needed */
+  width: 150px; 
+  pointer-events: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 0.5rem;
 }
+
+/* Remove spinning animation */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: none; /* removed animation */
+  }
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +38,75 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Header section */
+.App-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main title */
+.App-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1b3a57;
+}
+
+/* Advice paragraph styling */
+.App-advice {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #1f3c57;
+  margin-bottom: 2rem;
+}
+
+/* Links */
+.App-link {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #1b3a57;
+}
+
+/* Buttons for advice or actions */
+.App-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.App-button:hover {
+  background-color: #1b3a57;
+  transform: scale(1.05);
+}
+
+/* Card-like container for advice */
+.App-card {
+  background-color: rgba(255,255,255,0.9);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  width: 100%;
 }
