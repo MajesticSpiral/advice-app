@@ -24,7 +24,23 @@ A cozy little React app that delivers uplifting advice to brighten your day. Bui
 
 ## How to Run Locally
 
-1. Clone the repo:  
+Follow these steps to run **Friendly Advice Hub** on your local machine:
+
+1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/MajesticSpiral/advice-app.git
+
+Navigate to the project folder:
+
+cd advice-app
+
+Install dependencies:
+
+npm install
+
+This will install all required packages listed in package.json.
+
+Start the development server:
+
+npm start
